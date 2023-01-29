@@ -73,8 +73,7 @@ ________________________________________________________________________
 
 ![image](https://user-images.githubusercontent.com/88631375/215351300-44267187-ba3a-4530-a3e9-0c433d0ef998.png) Keras 
 
-![image](https://user-images.githubusercontent.com/88631375/215351336-6183d949-5d2b-4e72-a81a-e401e2349851.png) matplotlib
-
+![image](https://user-images.githubusercontent.com/88631375/215354754-ee6a431e-b4bd-43c0-b300-2cd650983f25.png)  matplotlib
 ______________________________________________________________________
 #Project steps 
 
