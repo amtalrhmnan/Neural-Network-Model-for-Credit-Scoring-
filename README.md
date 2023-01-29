@@ -37,6 +37,9 @@ ______________________________________________________________________
 
 The task of the project is to predict a person's or company's creditworthiness. Creating a Multilayer Perceptron (MLP) model that can precisely forecast the probability of a borrower defaulting on a loan.
 An extremely popular approach in credit scoring systems is using classical machine learning models such as decision trees and logistic regression these models give a good prediction but with the consideration of the sensitivity of loan risks to lenders, building new approaches with higher accuracy and higher ability to learn as the bigger data is a game changer, As shown in the following figure, deep learning models are superior to classical machine learning models.
+
+
+
 ![Picture21](https://user-images.githubusercontent.com/88631375/215350788-dcf3875f-1b60-4c34-8d17-1ff0677ae150.png)
 _____________________________________________________________________
 #Multilayer perceptron (MLP)
