@@ -125,6 +125,8 @@ This involves designing and implementing the neural network model using keras wi
 ![image](https://user-images.githubusercontent.com/88631375/215351899-75532258-d643-4b84-a512-a7154a1219c2.png)
 
 Defining the architecture of the model
+
+
 In this step, I have defined the different layers in my model and the connections between them. Since Keras has two main types of models: Sequential and Functional models. I have chosen the Sequential model, then all I have done is defined each layer in the model, an input layer with the size of (None, 10) (the length of the X values) and the output layer is a single neuron layer since it is a binary classification problem, the three hidden layers are set to 100-125-100 respectively, there is no thump rule for the number of neurons in the hidden layers but by trying I found that this is the most stable structure. The following table shows the model architecture
 
 _________________________________________________________________
