@@ -149,9 +149,16 @@ _________________________________________________________________
 
 
 Activation functions 
+
+
 Relu
+
+
 The rectified linear unit (ReLU) is a type of activation function commonly used in neural networks, particularly in CNNs and MLPs. It is defined as:
+
+
  f(x)=max⁡(0,x),
+ 
  where x is the input value.
 
  ReLU is a piece-wise linear function that outputs the input value if it is positive and 0 if it is negative.
