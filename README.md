@@ -140,7 +140,6 @@ Non-trainable params: 0
 _________________________________________________________________
 
 
-![image](https://user-images.githubusercontent.com/88631375/215353221-79ca6335-cdc4-4849-8c21-2db57ed505d9.png)
 
 
 
@@ -174,14 +173,10 @@ The confusion matrix and metrics
 
 
 To make this model useful the results must be understood, one way to do this is using the Confusion Matrix form sklearn.metrics
-A confusion matrix is a performance evaluation tool that is particularly useful in assessing recall, precision, specificity, accuracy, and the area under the curve (AUC) of a classification model.
+A confusion matrix is a performance evaluation tool that is particularly useful in assessing recall, precision, accuracy, of a classification model.
 Interpreting The Confusion Matrix 
-The terminology of The Confusion Matrix is as follows:
-•	True Positives (TP): The model predicted positive, and the actual label is positive
-•	True Negative (TN): The model predicted negative, and the actual label is negative
-•	False Positive (FP): The model predicted positive, and the actual label was negative
-•	False Negative (FN): The model predicted negative, and the actual label was positive
-These terms could be presented visually as follows:
+
+
 
 ![image](https://user-images.githubusercontent.com/88631375/215353864-958b87bb-a307-4388-852b-5021a6b939ca.png)
 
