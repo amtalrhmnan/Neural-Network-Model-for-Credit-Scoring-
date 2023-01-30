@@ -177,15 +177,7 @@ This project offers a deep learning model using multilayer perceptron to make pr
 The confusion matrix and metrics
 
 
-To make this model useful the results must be understood, one way to do this is using the Confusion Matrix form sklearn.metrics
-A confusion matrix is a performance evaluation tool that is particularly useful in assessing recall, precision, accuracy, of a classification model.
 Interpreting The Confusion Matrix 
-
-
-
-![image](https://user-images.githubusercontent.com/88631375/215353864-958b87bb-a307-4388-852b-5021a6b939ca.png)
-
-Now I will perform the Confusion Matrix of the model in similar form 
 
 
 ![image](https://user-images.githubusercontent.com/88631375/215353912-1a190825-ca9b-4ada-9a05-a0e26b7ff6c0.png)
