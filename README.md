@@ -116,7 +116,7 @@ This involves designing and implementing the neural network model using keras wi
 
 ![image](https://user-images.githubusercontent.com/88631375/215351899-75532258-d643-4b84-a512-a7154a1219c2.png)
 
-Defining the architecture of the model
+Defining the architecture of the model #
 
 
 In this step, I have defined the different layers in my model and the connections between them. Since Keras has two main types of models: Sequential and Functional models. I have chosen the Sequential model, then all I have done is defined each layer in the model, an input layer with the size of (None, 10) (the length of the X values) and the output layer is a single neuron layer since it is a binary classification problem, the three hidden layers are set to 100-125-100 respectively, there is no thump rule for the number of neurons in the hidden layers but by trying I found that this is the most stable structure. The following table shows the model architecture
@@ -139,13 +139,16 @@ Trainable params: 26,426
 Non-trainable params: 0
 _________________________________________________________________
 
+Compile the network #
+
+Compiling code means converting it into a format that a machine can understand. The model.compile() method in Keras performs this function. To compile the model, I define the loss function, which calculates our model’s losses, the optimizer, which reduces the loss, and the metrics, which are used to determine our model’s accuracy.
 
 
 
 
 
+Fit the network #
 
-3.	Fit the network: 
 Fitting the model to the data after compiling with model.fit(). This is used to train the model on the data. 
 Passing the independent and dependent features for training set for training the model as follows:
 •	 validation data will be evaluated at the end of each epoch
@@ -153,7 +156,7 @@ Passing the independent and dependent features for training set for training the
 •	storing the trained model in model_history variable which will be used to visualize the training process
 ModelCheckpoint callback is used in conjunction with model.fit() training to store a model or weights (in a checkpoint file) at specified interval so that the model or weights may be loaded later to continue training from the saved state.
 
-4.	Evaluate the model: 
+Evaluate the model #
 Once the model is trained, it is tested on the testing data to evaluate its performance. This involves comparing the model’s predictions to the actual labels and calculating metrics such as accuracy. Using the following code shown in the figure 
 
 ![image](https://user-images.githubusercontent.com/88631375/215353642-b0f4f90f-79ec-4b0e-9d36-14e023fb92c0.png)
@@ -161,7 +164,9 @@ Once the model is trained, it is tested on the testing data to evaluate its perf
 The Final Accuracy= 0.935366690158844
 
 
-5.	Make Predictions:
+Make Predictions #
+
+
  Using model.predict() to make predictions using my model on test data.
 
 _________________________________________________________________________
