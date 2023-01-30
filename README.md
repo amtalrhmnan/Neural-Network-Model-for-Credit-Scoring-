@@ -2,6 +2,9 @@
 A neural network model for credit scoring, that involves assessing an individual's creditworthiness based on their financial history and other factors, The results showed that the neural network model outperformed traditional models in terms of accuracy and F1 score.
 
 ________________________________________________________________________________________
+Abstract
+
+
 This project aimed to investigate the potential of neural network models for credit scoring, a task that involves assessing an individual's creditworthiness based on their financial history and other factors. I used the (Give me some credit) dataset and developed a neural network model for credit scoring and evaluated its performance in comparison to traditional machine learning models. The results showed that the neural network model outperformed traditional models in terms of accuracy and F1 score, indicating that it was able to extract valuable features from the data and make more informed predictions. The model's ability to handle a large amount of data and capture non-linear relationships between features is particularly beneficial for credit scoring. The project also highlighted the importance of considering ethical issues and fair decision-making in any credit scoring project. Overall, the results demonstrate the potential of neural networks for credit scoring and encourage further research to improve the model's performance and generalizability.
 
 Dataset link: https://www.kaggle.com/c/GiveMeSomeCredit
@@ -13,9 +16,6 @@ Credit scoring has a long history that dates back to the 1950s, when it was init
 
 With the development of more complex statistical models and the advancement of more data sources, the usage of credit scoring has grown both in scope and sophistication over time. With the expansion of the mortgage market in the 1980s and 1990s, the use of credit scores exploded as lenders started utilizing them to assist determine the risk of lending to property buyers.
 With the rise of AI and machine learning in recent decades, credit scoring has continued to advance. Nowadays, credit scoring models frequently use a variety of data sources and cutting-edge Artificial Intelligence techniques, such neural networks, to provide more precise and trustworthy predictions about the creditworthiness of borrowers.
-A credit scoring system that incorporates artificial intelligence (AI) and neural networks enables more precise and effective risk assessment. A deep learning system known as a neural network, which takes its structural cues from the human brain, is particularly effective at interpreting complicated and multivariate data. A model that can precisely predict a borrower's creditworthiness can be developed by training a neural network on a large collection of credit data. This is accomplished by giving the neural network inputs, including data on finances and credit histories, and training it to produce a default probability. Artificial intelligence (AI) and neural networks can assist lenders in making more educated and trustworthy lending decisions, ultimately resulting in enhanced loan availability and risk management for borrowers.
-
-A neural network credit score model is a deep learning model used to forecast a person's or company's creditworthiness. Creating a model that can precisely forecast the probability of a borrower defaulting on a loan is the goal of this project. This is a helpful tool for lenders since it enables them to choose which borrowers to lend to and under what conditions.
 
 _____________________________________________________________________
 #Project objective
@@ -49,15 +49,7 @@ A Multilayer Perceptron (MLP) is a fully connected multi-layer neural network.
 
 ![image](https://user-images.githubusercontent.com/88631375/215350990-fa1b665d-b17d-47fb-bc58-56c94f84aea0.png)
 
-A layer is made up of several neurons stacked in a row, while a multi-layer neural network is made up of many layers that are stacked next to each another.
-I have explained the main components of this of structure below.
-Input layer
-I loaded a CSV file into the input layer to provide the model with the data. It is the only layer that is visible in the entire design of a neural network that transfers all the information from the outside world without any processing, in my project the input layer size will be 10 since I have 10 features in the dataset, the dataset will be explained in the dataset section 
 
-Hidden layers 
-Hidden layers are intermediate layers that do all calculations and extract features from data. There can be numerous interconnected hidden layers that account for searching for various hidden features in the data, in my project I built 3 hidden layers with 100-125 –100 neurons with respect to the order. 
-Output layer 
-The output layer uses data from earlier hidden layers and the model's learnings to make a final prediction. The layer where we obtain the end outcome is the most crucial one. Classification/regression models typically have a single node in the output layer. However, it depends entirely on the nature of the problem at hand and how the model was created, In the case of my project the output layer is a single neuron since it is a binary classification problem 
 
 ________________________________________________________________________
 #Used packages 
@@ -152,91 +144,7 @@ _________________________________________________________________
 
 
 
-Activation functions 
 
-
-Relu
-
-
-The rectified linear unit (ReLU) is a type of activation function commonly used in neural networks, particularly in CNNs and MLPs. It is defined as:
-
-
- f(x)=max⁡(0,x),
- 
- where x is the input value.
-
- ReLU is a piece-wise linear function that outputs the input value if it is positive and 0 if it is negative.
-f(x)={x ,  x>0   and 0 , x<0  }
-
-
- 
- ![image](https://user-images.githubusercontent.com/88631375/215353412-61bcb493-88d7-48c1-97e9-aafacab3c94a.png)
-
-
-
-
-ReLU function is not fully interval-derivable, but we can take sub-gradient, as shown in the figure below.
-
-
-
- ![image](https://user-images.githubusercontent.com/88631375/215353425-af2ac0b8-59db-4aa3-b48a-f4e3ff78d643.png)
-
-
-ReLU is widely used in deep learning because it is computationally efficient and does not require complex mathematical operations like sigmoid or tanh functions. Additionally, ReLU can improve the training speed of a neural network and reduce the risk of the model getting stuck in the saturated state. This function helps the model to converge faster and improve the performance of the model.
-ReLU has limitations, in some cases it can produce a problem called “Dying ReLU” where the weights on the negative side of the activation function will update towards zero, resulting in a model that won’t learn from negative inputs. To overcome this problem, Leaky ReLU, PreLU, and RreLU are popular variants of ReLU, but my project is a binary classification model so this will not be a problem.
-
-Sigmoid
-A sigmoid function is a common type of activation function in neural networks. It’s a mathematical function that converts any input value to an output value between 0 and 1. The function is named “sigmoid” because it resembles a “S” curve.
- σ(x)=1/((1+e^((-x) ) ) ),
- where x is the input value and e is the mathematical constant (approximately 2.71828). The function accepts any real value as input and returns a value between 0 and 1. As a result, it may be used to describe probability or binary classification issues.
- 
- 
- ![image](https://user-images.githubusercontent.com/88631375/215353445-d4318f8d-5920-45c6-8957-1dbb29e1d779.png)
-
-
-The sigmoid function is a type of logistic function, which is popular in deep learning because it has a pleasant mathematical feature that makes it simple to optimize using gradient descent. The sigmoid function and its derivatives are simple to calculate, and it is also a smooth function, making it an excellent candidate for optimization.
-The derivative of the sigmoid function is shown in the following figure:
-
- ![image](https://user-images.githubusercontent.com/88631375/215353464-fad75f48-0256-483f-9df1-02a03cf052ab.png)
-
-
-2.Compile the network: 
-
-Compiling code means converting it into a format that a machine can understand. The model.compile() method in Keras performs this function. To compile the model, I define the loss function, which calculates our model’s losses, the optimizer, which reduces the loss, and the metrics, which are used to determine our model’s accuracy.
- 
-![image](https://user-images.githubusercontent.com/88631375/215353520-f6dd9b76-807e-43ae-8457-cb91ba8decea.png)
-
-Binary cross-entropy loss function
-Binary cross-entropy loss is a loss function commonly used in binary classification tasks, where the goal is to predict one of two possible outcomes (e.g. true/false, 0/1). The function compares the predicted probability for the true class (labeled as 1) to the actual outcome, and calculates the loss as the negative log-likelihood of the true class. The smaller the loss, the better the model’s prediction. The formula is defined as:
-
-Loss=-(y*log⁡(p)+(1-y)*log⁡(1-p) )
-
-Where:
-
-	y is the true label (0 or 1)
-	p is the predicted probability of the positive class
-	log is the natural logarithm
-What are gradient descent and stochastic gradient descent?
-Gradient descent (GD) optimization
-The weights are incrementally updated after each epoch (= pass over the training dataset) using the Gradient Decent optimization algorithm.
-By taking a step in the opposite direction of the cost gradient, the magnitude and direction of the weight update are computed.
- 
-Δwj=-η ∂J/∂wj,
-
-where η is the learning rate. The weights are then updated after each epoch by the following update rule:
- 
- w≔w+Δw, 
- 
-where Δw is a vector that contains the weight updates of each weight coefficient w, which are computed as follows:
- 
-Δwj=-η ∂J/∂wj=-η∑^i▒(t arg⁡e t(i)-output(i))(-x(i)j) =η∑^i▒(t arg⁡e t(i)-output(i))x(i)j.
-Gradient Descent optimization can be visualized as a hiker (the weight coefficient) attempting to descend a mountain (cost function) into a valley (cost minimum), with each step determined by the steepness of the slope (gradient) and the hiker’s leg length (learning rate). With a single weight coefficient in a cost function, we can illustrate this concept as follows:
- 
- ![image](https://user-images.githubusercontent.com/88631375/215353582-2c452e6e-2cd2-4dbc-b0c3-5fcf29e568fb.png)
-
-
-Stochastic Gradient Descent
-(SGD) is an optimization algorithm that finds the smallest value of a function. It is a gradient descent algorithm that is useful for large-scale optimization problems because it updates model parameters based on a single training example at a time (as opposed to using the entire dataset to compute the gradient). SGD can converge faster and be more computationally efficient than other optimization algorithms because of this. The algorithm begins with a fixed set of parameters and iteratively updates them by moving in the opposite direction of the gradient of the objective function with respect to the parameters. A learning rate determines the step size, which controls how large of a step to take in the opposite direction of the gradient.
 
 3.	Fit the network: 
 Fitting the model to the data after compiling with model.fit(). This is used to train the model on the data. 
@@ -283,34 +191,28 @@ Now I will perform the Confusion Matrix of the model in similar form
 ![image](https://user-images.githubusercontent.com/88631375/215353912-1a190825-ca9b-4ada-9a05-a0e26b7ff6c0.png)
 
 	Accuracy
-accuracy is a commonly used metric for evaluating the performance of a model on a given dataset. It is the ratio of the number of correct predictions made by the model to the total number of predictions made. It is often expressed as a percentage. However, it is important to note that accuracy alone may not always be the best metric to evaluate a model's performance, especially when the dataset is imbalanced or when the cost of false positives and false negatives are different.
-Accuracy=(TP + TN)/(TP+FP+TN+FN)
+
 The accuracy is 0.93536667.
 
 
 
 
 	Precision
-Precision is a metric used to evaluate the performance of a binary classification model. It is defined as the ratio of true positive predictions to the total number of positive predictions. In other words, it is the proportion of correct positive predictions out of all the positive predictions made by the classifier. High precision means that the classifier is good at identifying positive instances, while low precision means that it often makes false positive predictions.
-Pr⁡e cision=TP/(TP+FP )
+
 The precision is 0.94005818
 
 
 	Recall
-Recall is a measure of a classifier's ability to correctly identify positive instances from a dataset. It is defined as the ratio of true positive predictions to the total number of actual positive instances. It is often used in the context of binary classification problems, where it measures the proportion of actual positive instances that were correctly identified by the classifier. A high recall value indicates that the classifier has a low false negative rate, meaning that it correctly identifies most of the positive instances.
-Recall=TP/(TP+FN)
+
 The recall is 0.99402654
 
 
 
 	F1-Score
-F1-score is a measure of a model's accuracy and balance between precision and recall. It is the harmonic mean of precision and recall, where the best value is 1.0 and the worst value is 0.0. It is often used as a single number summary of the performance of a classification model, as it takes into account both the false positives and false negatives.
-The F1-score is calculated using the following formula:
-F1=2*((precision*recall))/((precision+recall) )
-F1-score is a way to balance precision and recall to have a single number that indicates how well a model performs. It's particularly useful when the dataset is imbalanced and one class is much more frequent than the other which is the case of my project 
+
 The F1-score is 0.9662894
 
-I must note that these metrics were calculated manually to provide familiarity to the readers with no technical background but can be easily calculated using sklearn.metrics
+
 
 
 Visualizing the model performance
