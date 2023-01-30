@@ -112,6 +112,8 @@ The number of dependents of a borrower is considered an important factor in cred
 2 Split the data into training and testing sets.
 
 3 Build the model.
+
+
 This involves designing and implementing the neural network model using keras with TensorFlow library in the back end , The model is then trained on the training data using an optimization algorithm I used stochastic gradient descent (SGD) to adjust the model's parameters and minimize the error between the predicted and actual labels.
 
 ![image](https://user-images.githubusercontent.com/88631375/215351899-75532258-d643-4b84-a512-a7154a1219c2.png)
